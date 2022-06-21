@@ -1,0 +1,40 @@
+{
+  "name": "emotone",
+  "version": "1.0.0",
+  "description": "emotone app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "test": "jest --watchAll",
+    "dev": "run-p dev:client dev:server",
+    "dev:client": "webpack --watch --config client/webpack.config.js",
+    "dev:server": "nodemon --watch server",
+    "knex": "knex --knexfile server/db/knexfile.js",
+    "lint": "eslint --ext .js,.jsx ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jojo-Mepham/emotone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jojo-Mepham/emotone/issues"
+  },
+  "homepage": "https://github.com/Jojo-Mepham/emotone#readme",
+  "dependencies": {
+    "@babel/register": "^7.17.7",
+    "express": "^4.18.1",
+    "knex": "^2.1.0",
+    "sqlite3": "^5.0.8"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "jest": "^28.1.1",
+    "nodemon": "^2.0.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
